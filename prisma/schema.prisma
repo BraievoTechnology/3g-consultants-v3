@@ -1,0 +1,138 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model NewsFeed {
+  id         Int            @id @default(autoincrement())
+  title      String
+  summary    String?
+  status     NewsFeedStatus
+  images     String
+  createTime DateTime?
+}
+
+model Project {
+  id           Int             @id @default(autoincrement())
+  project_name String
+  location     String?
+  start_date   DateTime?
+  end_date     DateTime?
+  budget       Decimal?
+  status       ProjectStatus
+  description  String?
+  category     Category
+  images       ProjectImages[]
+}
+
+model ProjectImages {
+  id         Int     @id @default(autoincrement())
+  project    Project @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  projectId  Int
+  image_name String
+}
+
+model JobOpportunities {
+  id                   Int            @id @default(autoincrement())
+  job_title            String
+  employment_type      EmploymentType
+  department           String?
+  location             String?
+  application_deadline DateTime?
+  status               JobStatus
+  job_description      String?
+  requirements         String?
+
+  applications JobApplications[]
+}
+
+model JobApplications {
+  id              Int      @id @default(autoincrement())
+  name            String
+  email           String
+  contact         String?
+  experience      String?
+  expected_salary Decimal?
+  cv_name         String?
+  cover_letter    String?
+  skills          String
+
+  jobOpportunity   JobOpportunities @relation(fields: [jobOpportunityId], references: [id], onDelete: Cascade)
+  jobOpportunityId Int // Foreign key
+}
+
+model Event {
+  id          Int           @id @default(autoincrement())
+  title       String?
+  event_type  EventType?
+  date        DateTime?
+  start_time  DateTime?
+  end_time    DateTime?
+  location    String?
+  capacity    Int?
+  status      EventStatus
+  description String?
+  images      EventImages[]
+}
+
+model user {
+  id       Int    @id @default(autoincrement())
+  userName String @unique
+  password String
+}
+
+model EventImages {
+  id         Int    @id @default(autoincrement())
+  event      Event  @relation(fields: [eventId], references: [id], onDelete: Cascade)
+  eventId    Int
+  image_name String @db.LongText
+}
+
+enum EventType {
+  conference
+  workshop
+}
+
+enum NewsFeedStatus {
+  published
+  draft
+}
+
+enum ProjectStatus {
+  Planning
+  inprogress
+  completed
+  on_hold
+}
+
+enum EmploymentType {
+  FULLTIME
+  PARTTIME
+  CONTRACT
+  INTERNSHIP
+}
+
+enum JobStatus {
+  DRAFT
+  ACTIVE
+  CLOSED
+}
+
+enum EventStatus {
+  upcoming
+  active
+  completed
+}
+
+enum Category {
+  PROCUREMENT_AND_CONTRACTS
+  HIGHWAYS_AND_TRANSPORTATION_ENGINEERING
+  WATER_RESOURCES_ENGINEERING
+  ENVIRONMENTAL_AND_CLIMATE_RESILIENCE_ENGINEERING
+  URBAN_RURAL_AND_REGIONAL_DEVELOPMENT
+  COMMERCIAL_AND_HOUSING_DEVELOPMENT
+}
