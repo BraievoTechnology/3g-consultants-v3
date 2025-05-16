@@ -16,7 +16,7 @@ export default function AdminLoginPage() {
     setLoading(true);
 
     try {
-      const response = await fetch("https://3g-consultants-v2.vercel.app/api/api/user/signIn", {
+      const response = await fetch("https://3g-consultants-v2-git-main-braievotechnologys-projects.vercel.app/api/user/signIn", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
