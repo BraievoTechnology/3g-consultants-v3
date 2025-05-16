@@ -186,9 +186,9 @@ const Header = () => {
             >
               <div className="flex-shrink-0">
                 <img
-                  src="https://uploadthingy.s3.us-west-1.amazonaws.com/f1yqtq4t3Xjy4NfwYgbtYe/logo.jpg"
+                  src="https://uploadthingy.s3.us-west-1.amazonaws.com/pwNwsft751H7eYgyPU3Lzz/unnamed.png"
                   alt="3G Consultants Logo"
-                  className="w-10 h-10 object-contain"
+                  className="w-14 h-14 object-contain"
                 />
               </div>
               <Link
