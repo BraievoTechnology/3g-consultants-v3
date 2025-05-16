@@ -67,20 +67,22 @@ const ProjectCard = ({ project }: { project: Project }) => {
               <h3 className="text-2xl font-bold text-black">
                 {project.project_name}
               </h3>
-              <span className="text-sm font-medium text-black/80">
-                {new Date(project.start_date).toLocaleDateString("en-US", {
+            </div>
+            <span className="text-sm font-medium text-black/80">
+              {new Date(project.start_date).toLocaleDateString("en-US", {
+                day: "numeric",
+                month: "short",
+                year: "numeric",
+              })}
+              {project.end_date &&
+                ` - ${new Date(project.end_date).toLocaleDateString("en-US", {
                   day: "numeric",
                   month: "short",
                   year: "numeric",
-                })}
-                {project.end_date &&
-                  ` - ${new Date(project.end_date).toLocaleDateString("en-US", {
-                    day: "numeric",
-                    month: "short",
-                    year: "numeric",
-                  })}`}
-              </span>
-            </div>
+                })}`}
+            </span>
+            <br />
+            <br />
             <p className="text-black/80 text-sm leading-relaxed line-clamp-4">
               {project.description}
             </p>
