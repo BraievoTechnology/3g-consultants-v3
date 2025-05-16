@@ -83,7 +83,7 @@ const CareersPage = () => {
   }, [activeEmploymentType, searchQuery, jobs]);
   if (loading) {
     return (
-      <div className="w-full min-h-screen flex items-center justify-center bg-black">
+      <div className="w-full min-h-screen flex items-center justify-center bg-[#f5f5f5]">
         <div className="text-xl text-[#f1c235]">
           Loading job opportunities...
         </div>
