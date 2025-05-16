@@ -59,7 +59,7 @@ const GenerateDocument: React.FC = () => {
       setError("");
       try {
         const projectPromises = selectedCategories.map((category) =>
-          axios.get(`http://localhost:3000/api/project?category=${category}`)
+          axios.get(`https://3g-consultants-v3-git-main-braievotechnologys-projects.vercel.app/api/project?category=${category}`)
         );
         const responses = await Promise.all(projectPromises);
         const allProjects: ExtendedProject[] = responses.flatMap(

@@ -9,7 +9,7 @@
 
 import axios from "axios";
 const api = axios.create({
-  baseURL: "https://3g-consultants-v2.vercel.app/api/",
+  baseURL: "https://3g-consultants-v3-git-main-braievotechnologys-projects.vercel.app/api/",
   headers: {
     "Content-Type": "application/json",
   },
