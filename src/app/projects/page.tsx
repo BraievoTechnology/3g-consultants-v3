@@ -47,8 +47,8 @@ const ProjectCard = ({ project }: { project: Project }) => {
                     ? "bg-blue-500/90 text-white"
                     : project.status.toLowerCase() === "inprogress" ||
                       project.status === "Ongoing"
-                    ? "bg-[#f1c235]/90 text-black"
-                    : "bg-green-500/90 text-white"
+                    ? "bg-[#ffbe00]/90 text-black capitalize"
+                    : "bg-green-500/90 text-white capitalize"
                 }`}
               >
                 {normalizeStatus(project.status)}
@@ -61,7 +61,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
             </h3>
           </div>
         </div>
-        <div className="absolute inset-0 bg-[#f1c235]/90 p-6 flex flex-col justify-between translate-y-full transition-transform duration-500 ease-in-out group-hover:translate-y-0">
+        <div className="absolute inset-0 bg-[#ffbe00] p-6 flex flex-col justify-between translate-y-full transition-transform duration-500 ease-in-out group-hover:translate-y-0">
           <div className="space-y-4">
             <div className="flex justify-between items-start">
               <h3 className="text-2xl font-bold text-black">
@@ -94,7 +94,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
               </h4>
               <p className="text-black/80 text-sm">{project.location}</p>
             </div>
-           {/* <div>
+            {/* <div>
               <h4 className="text-sm font-semibold text-black mb-1">
                 Budget (LKR)
               </h4>
@@ -128,7 +128,7 @@ const ProjectsPage = () => {
   if (loading) {
     return (
       <div className="w-full min-h-screen flex items-center justify-center bg-[#f5f5f5]">
-        <div className="text-xl text-[#f1c235]">Loading projects...</div>
+        <div className="text-xl text-[#ffbe00]">Loading projects...</div>
       </div>
     );
   }
@@ -177,7 +177,7 @@ const ProjectsPage = () => {
                   onClick={() => setActiveCategory(category)}
                   className={`px-6 py-2 rounded-full transition-colors duration-200 ${
                     activeCategory === category
-                      ? "bg-[#f1c235] text-white"
+                      ? "bg-[#ffbe00] text-black"
                       : "bg-gray-200 text-gray-700 hover:bg-gray-300"
                   }`}
                 >

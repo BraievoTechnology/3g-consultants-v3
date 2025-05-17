@@ -15,18 +15,18 @@ export default function AdminLoginPage() {
     setError("");
     setLoading(true);
 
+
     try {
-      const response = await fetch(
-        "https://3g-consultants-v3-git-main-braievotechnologys-projects.vercel.app/api/user/signIn",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ userName: username, password }),
-          credentials: "include", // ✅ important for cookies
-        }
-      );
+      let API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
+      /*let API_BASE_URL = "http://localhost:3000/api/";*/
+      const response = await fetch(`${API_BASE_URL}user/signIn`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ userName: username, password }),
+        credentials: "include", // ✅ important for cookies
+      });
 
       const data = await response.json();
 

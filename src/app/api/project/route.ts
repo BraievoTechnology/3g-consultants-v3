@@ -49,7 +49,7 @@ export async function POST(req: NextRequest) {
                 location,
                 start_date: start_date ? new Date(start_date) : undefined,
                 end_date: end_date ? new Date(end_date) : undefined,
-                budget: budget ? parseFloat(budget) : undefined,
+                budget: budget,
                 status: status as any, // ideally cast to enum
                 description,
                 category: category as any, // ideally cast to enum

@@ -2,7 +2,7 @@ import React from "react";
 import Button from "@/app/Components/ui/Button";
 const CtaSection = () => {
   return (
-    <section className="py-16 bg-[#f1c235]">
+    <section className="py-16 bg-[#ffbe00]">
       <div className="container mx-auto px-4 text-center">
         <h2 className="text-3xl md:text-4xl font-bold text-black mb-6">
           Ready to Start Your Next Project?
