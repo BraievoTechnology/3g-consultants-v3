@@ -1,10 +1,10 @@
 "use client";
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useEffect, useState } from "react";
 import { ChevronDownIcon } from "lucide-react";
 import Button from "../ui/Button";
 import BackgroundGradient from "../animations/BackgroundGradient";
 import FadeIn from "../animations/Fadeln";
+import { AnimatePresence, motion } from "framer-motion";
 const HeroSection = () => {
   const scrollToContent = () => {
     const aboutSection = document.getElementById("about");
@@ -14,14 +14,24 @@ const HeroSection = () => {
       });
     }
   };
+
+  const [currentWordIndex, setCurrentWordIndex] = useState(0);
+  const words = ["Design", "Manage", "Resolve"];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentWordIndex((prev) => (prev + 1) % words.length);
+    }, 2000);
+    return () => clearInterval(interval);
+  }, []);
   return (
     <section className="relative bg-black text-white overflow-hidden h-screen">
       <BackgroundGradient />
       <div
-        className="absolute inset-0 bg-cover mt-0 bg-center bg-no-repeat opacity-55"
+        className="absolute inset-0 bg-cover bg-black mt-0 bg-center bg-no-repeat opacity-55"
         style={{
           backgroundImage:
-            "url('https://uploadthingy.s3.us-west-1.amazonaws.com/nbLYs5g2CKBGCcA3GkeemP/Untitled_design_%281%29.jpg')",
+            "url('https://3gconsultantstorage.blob.core.windows.net/3g-blob/LandingPage/LandingPage.jpg')",
         }}
       />
       <motion.div
@@ -61,7 +71,40 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 h-full flex mt-[170px] relative z-10">
         <div className="max-w-3xl mt-20">
           <FadeIn delay={0.2}>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-[#ffbe00]">
+            <span>
+              <span className="text-xl md:text-xl lg:text-xl font-bold mb-6 mr-[5px]">
+                We
+              </span>
+              <AnimatePresence mode="wait">
+                <motion.span
+                  key={words[currentWordIndex]}
+                  initial={{
+                    y: 30,
+                    opacity: 0,
+                  }}
+                  animate={{
+                    y: 0,
+                    opacity: 1,
+                  }}
+                  exit={{
+                    y: -30,
+                    opacity: 0,
+                  }}
+                  transition={{
+                    duration: 0.5,
+                    type: "spring",
+                    stiffness: 300,
+                    damping: 30,
+                  }}
+                  className="whitespace-nowrap text-xl md:text-xl lg:text-xl text-[#ffbe00] mr-[5px]"
+                >
+                  {words[currentWordIndex]}
+                </motion.span>
+              </AnimatePresence>
+            </span>
+          </FadeIn>
+          <FadeIn delay={0.2}>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-[#ffbe00] leading-tight md:leading-snug lg:leading-normal">
               Engineering Excellence for Tomorrow's World
             </h1>
           </FadeIn>
