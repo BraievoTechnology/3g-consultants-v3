@@ -109,11 +109,11 @@ const JobApplications: React.FC = () => {
             Manage and track all job applications
           </p>
         </div>
-      {/*  <DataTable
+        <DataTable
           columns={columns}
           data={filteredApplications}
           searchPlaceholder="Search applications..."
-          filterOptions={{
+        /*  filterOptions={{
             label: "Filter by status",
             options: [
               {
@@ -137,13 +137,13 @@ const JobApplications: React.FC = () => {
                 value: "Rejected",
               },
             ],
-          }}
+          }}*/
           onSearch={setSearchTerm}
           onRowClick={(row) => {
             setSelectedApplication(row);
             setIsModalOpen(true);
           }}
-        />*/}
+        />
         {selectedApplication && (
           <Modal
             isOpen={isModalOpen}
