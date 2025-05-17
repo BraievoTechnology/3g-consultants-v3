@@ -109,7 +109,7 @@ const JobApplications: React.FC = () => {
             Manage and track all job applications
           </p>
         </div>
-        <DataTable
+      {/*  <DataTable
           columns={columns}
           data={filteredApplications}
           searchPlaceholder="Search applications..."
@@ -143,7 +143,7 @@ const JobApplications: React.FC = () => {
             setSelectedApplication(row);
             setIsModalOpen(true);
           }}
-        />
+        />*/}
         {selectedApplication && (
           <Modal
             isOpen={isModalOpen}
