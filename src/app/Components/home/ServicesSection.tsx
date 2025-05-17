@@ -14,57 +14,57 @@ import {
 import SectionTitle from "../ui/SectionTitle";
 const services = [
   {
-    id: "procurement and contracts",
+    id: "procurement",
     title: "Procurement and Contracts",
     subtitle:
       "Procurement involves making purchasing decisions under conditions of scarcity. To ensure project success, a legally binding contract is essential, as it defines the rights and obligations of all parties involved. Effective Contract Administration is key to successfully delivering the project.",
     icon: <BuildingIcon className="w-8 h-8 text-black" />,
-    link: "/services/construction",
+    link: "/servicespage/#procurement",
     image: "/assets/staticimages/1.jpg",
   },
   {
-    id: "highways and transportation engineering",
+    id: "highways",
     title: "Highways and Transportation Engineering",
     subtitle:
       "Sri Lanka's ongoing infrastructure developments, particularly in roads and related works, have opened up valuable opportunities for the firm to demonstrate its expertise in recent Highways and Transportation projects.",
     icon: <MapIcon className="w-8 h-8 text-black" />,
-    link: "/services/highways",
+    link: "/servicespage/#highways",
     image: "/assets/staticimages/2.jpg",
   },
   {
-    id: "water resources engineering",
+    id: "water",
     title: "Water Resources Engineering",
     subtitle:
       "3G Consultants (Pvt) Ltd. places high importance on water conservation and has consistently focused on sustainable water resource management, strictly following international standards in Water Resource Engineering.",
     icon: <DropletIcon className="w-8 h-8 text-black" />,
-    link: "/services/water",
+    link: "/servicespage/#water",
     image: "/assets/staticimages/3.jpg",
   },
   {
-    id: "environmental and climate resilience engineering",
+    id: "environmental",
     title: "Environmental and Climate Resilience Engineering",
     subtitle:
       "Sri Lanka, known for its rich biodiversity, offers ideal conditions for diverse flora and fauna. 3G Consultants (Pvt) Ltd. is committed to environmental protection and strongly values sustainable development and conservation.",
     icon: <LeafIcon className="w-8 h-8 text-black" />,
-    link: "/services/environmental",
+    link: "/servicespage/#environmental",
     image: "/assets/staticimages/4.jpg",
   },
   {
-    id: "urban, rural and regional development",
+    id: "urban",
     title: "Urban, Rural and Regional Development",
     subtitle:
       "To meet the growing population and rising living standards, numerous Urban, Rural, and Regional development projects are being initiated. 3G Consultants (Pvt) Ltd. believes that well-planned, innovative design is essential for these projects, especially when considering future expansion needs.",
     icon: <MapIcon className="w-8 h-8 text-black" />,
-    link: "/services/urban",
+    link: "/servicespage/#urban",
     image: "/assets/staticimages/5.jpg",
   },
   {
-    id: "commercial and housing development",
+    id: "housing",
     title: "Commercial and Housing Development",
     subtitle:
       "In many developing countries, there is a growing trend to adopt modern living standards by embracing Western-inspired architectural styles and advanced technologies, seen in developments like luxury housing, IT parks, educational cities, waterfronts, high-rise buildings, and iconic structures.",
     icon: <UrbanIcon className="w-8 h-8 text-black" />,
-    link: "/services/investment",
+    link: "/servicespage/#housing",
     image: "/assets/staticimages/6.jpg",
   },
 ];
@@ -117,7 +117,7 @@ const ServiceCard = ({ service }: { service: (typeof services)[0] }) => {
         perspective: "1000px",
       }}
     >
-      <Link href="/servicespage" className="block h-full">
+      <Link href={service.link} className="block h-full">
         <motion.div
           className="absolute inset-0 bg-cover bg-center"
           style={{
@@ -238,7 +238,7 @@ const MobileServiceCard = ({
             {service.subtitle}
           </p>
           <Link
-            href="/services"
+            href={service.link}
             className="inline-flex items-center text-yellow-400 font-medium"
           >
             Learn more

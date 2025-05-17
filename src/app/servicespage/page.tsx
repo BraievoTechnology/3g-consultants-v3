@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 
 import SectionTitle from "../Components/ui/SectionTitle";
 import Button from "../Components/ui/Button";
@@ -14,6 +14,8 @@ import {
 import { motion } from "framer-motion";
 import Header from "../Components/Layout/Header";
 import Footer from "../Components/Layout/Footer";
+import { useRouter } from "next/navigation";
+
 const services = [
   {
     id: "procurement",
@@ -77,6 +79,24 @@ const services = [
   },
 ];
 const ServicesPage = () => {
+  const router = useRouter();
+
+  useEffect(() => {
+    // Wait for router to be ready
+    if (!router.isReady) return;
+
+    const hash = router.asPath.split("#")[1];
+    if (hash) {
+      const el = document.getElementById(hash);
+      if (el) {
+        setTimeout(() => {
+          requestAnimationFrame(() => {
+            el.scrollIntoView({ behavior: "smooth", block: "start" });
+          });
+        }, 500);
+      }
+    }
+  }, [router.isReady, router.asPath]);
   return (
     <>
       <Header />
@@ -127,7 +147,8 @@ const ServicesPage = () => {
               {services.map((service, index) => (
                 <div
                   key={service.id}
-                  className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${
+                  id={service.id}
+                  className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center scroll-mt-[100px] ${
                     index % 2 === 1 ? "lg:flex-row-reverse" : ""
                   }`}
                 >
