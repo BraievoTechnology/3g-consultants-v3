@@ -15,8 +15,11 @@ export default function AdminLoginPage() {
     setError("");
     setLoading(true);
 
+
     try {
-      const response = await fetch("http://localhost:3000/api/user/signIn", {
+      let API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
+      /*let API_BASE_URL = "http://localhost:3000/api/";*/
+      const response = await fetch(`${API_BASE_URL}user/signIn`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
