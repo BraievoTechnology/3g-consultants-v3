@@ -72,7 +72,7 @@ const HeroSection = () => {
         <div className="max-w-3xl mt-20">
           <FadeIn delay={0.2}>
             <span>
-              <span className="text-xl md:text-xl lg:text-xl font-bold mb-6 mr-[5px]">
+              <span className="text-3xl md:text-3xl lg:text-3xl font-bold mb-6 mr-[5px]">
                 We
               </span>
               <AnimatePresence mode="wait">
@@ -96,7 +96,7 @@ const HeroSection = () => {
                     stiffness: 300,
                     damping: 30,
                   }}
-                  className="whitespace-nowrap text-xl md:text-xl lg:text-xl text-[#ffbe00] mr-[5px]"
+                  className="whitespace-nowrap font-bold text-3xl md:text-3xl lg:text-3xl text-[#ffbe00] mr-[5px]"
                 >
                   {words[currentWordIndex]}
                 </motion.span>
