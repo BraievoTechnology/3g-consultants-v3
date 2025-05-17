@@ -140,7 +140,7 @@ const ContactPage = () => {
                   </div>
                   <div className="flex items-start">
                     <div className="bg-black p-3 rounded-full mr-4">
-                      <ClockIcon size={24} className="text-[#ffbe00]." />
+                      <ClockIcon size={24} className="text-[#ffbe00]" />
                     </div>
                     <div>
                       <h3 className="text-lg font-bold text-black mb-1">
