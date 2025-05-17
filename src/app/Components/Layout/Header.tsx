@@ -157,7 +157,7 @@ const Header = () => {
             </div>
             <div className="flex items-center">
               <MailIcon size={16} className="mr-2" />
-              <span className="text-sm">info@3gconsultants.com</span>
+              <span className="text-sm">info@3gconsultants.lk</span>
             </div>
           </div>
           <div className="flex items-center">
