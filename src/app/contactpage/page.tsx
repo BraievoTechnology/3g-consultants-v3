@@ -94,8 +94,8 @@ const ContactPage = () => {
                 </p>
                 <div className="space-y-6 mt-8">
                   <div className="flex items-start">
-                    <div className="bg-black p-3 rounded-full mr-4">
-                      <MapPinIcon size={24} className="text-[#ffbe00]" />
+                    <div className="bg-[#ffbe00] p-3 rounded-full mr-4">
+                      <MapPinIcon size={24} className="text-black" />
                     </div>
                     <div>
                       <h3 className="text-lg font-bold text-black mb-1">
@@ -111,8 +111,8 @@ const ContactPage = () => {
                     </div>
                   </div>
                   <div className="flex items-start">
-                    <div className="bg-black p-3 rounded-full mr-4">
-                      <PhoneIcon size={24} className="text-[#ffbe00]" />
+                    <div className="bg-[#ffbe00] p-3 rounded-full mr-4">
+                      <PhoneIcon size={24} className="text-black" />
                     </div>
                     <div>
                       <h3 className="text-lg font-bold text-black mb-1">
@@ -125,8 +125,8 @@ const ContactPage = () => {
                     </div>
                   </div>
                   <div className="flex items-start">
-                    <div className="bg-black p-3 rounded-full mr-4">
-                      <MailIcon size={24} className="text-[#ffbe00]" />
+                    <div className="bg-[#ffbe00] p-3 rounded-full mr-4">
+                      <MailIcon size={24} className="text-black" />
                     </div>
                     <div>
                       <h3 className="text-lg font-bold text-black mb-1">
@@ -139,8 +139,8 @@ const ContactPage = () => {
                     </div>
                   </div>
                   <div className="flex items-start">
-                    <div className="bg-black p-3 rounded-full mr-4">
-                      <ClockIcon size={24} className="text-[#ffbe00]" />
+                    <div className="bg-[#ffbe00] p-3 rounded-full mr-4">
+                      <ClockIcon size={24} className="text-black" />
                     </div>
                     <div>
                       <h3 className="text-lg font-bold text-black mb-1">

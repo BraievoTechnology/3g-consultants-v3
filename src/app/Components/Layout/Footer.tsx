@@ -42,6 +42,13 @@ const Footer = () => {
       x: 5,
     },
   };
+  const serviceLinks = [
+    { name: "Procurement Contract", id: "procurement" },
+    { name: "Highways & Transportation", id: "highways" },
+    { name: "Water Resources", id: "water" },
+    { name: "Environmental Engineering", id: "environmental" },
+    { name: "Urban Development", id: "urban" },
+  ];
   return (
     <footer className="relative bg-[#f5f5f5] text-black">
       <motion.div
@@ -134,7 +141,13 @@ const Footer = () => {
               Quick Links
             </h3>
             <ul className="space-y-3">
-              {["Home", "About", "Services", "Projects"].map((item, index) => (
+              {[
+                { label: "Home", path: "/" },
+                { label: "About", path: "about" },
+                { label: "Services", path: "servicespage" },
+                { label: "Projects", path: "projects" },
+                { label: "Contact Us", path: "contactpage" },
+              ].map((item, index) => (
                 <motion.li
                   key={index}
                   variants={linkVariants}
@@ -142,11 +155,11 @@ const Footer = () => {
                   whileHover="hover"
                 >
                   <Link
-                    href={`/${item.toLowerCase().replace(" ", "-")}`}
+                    href={`/${item.path.toLowerCase().replace(" ", "-")}`}
                     className="flex items-center text-gray-500 hover:text-[#ffbe00] transition-colors"
                   >
                     <ChevronRightIcon size={16} className="mr-2" />
-                    {item}
+                    {item.label}
                   </Link>
                 </motion.li>
               ))}
@@ -167,14 +180,9 @@ const Footer = () => {
             <h3 className="text-lg font-semibold text-black mb-6">
               Our Services
             </h3>
+
             <ul className="space-y-3">
-              {[
-                "Procurement Contract",
-                "Highways & Transportation",
-                "Water Resources",
-                "Environmental Engineering",
-                "Urban Development",
-              ].map((service, index) => (
+              {serviceLinks.map((service, index) => (
                 <motion.li
                   key={index}
                   variants={linkVariants}
@@ -182,11 +190,11 @@ const Footer = () => {
                   whileHover="hover"
                 >
                   <Link
-                    href={`/servicespage/`}
+                    href={`/servicespage/#${service.id}`}
                     className="flex items-center text-gray-500 hover:text-[#ffbe00] transition-colors"
                   >
                     <ChevronRightIcon size={16} className="mr-2" />
-                    {service}
+                    {service.name}
                   </Link>
                 </motion.li>
               ))}
@@ -220,9 +228,10 @@ const Footer = () => {
 "
                 />
                 <span>
-                  19/B Jeswell Pl
+                  19/B Jeswell Pl,
                   <br />
-                  Nugegoda 10107 , Sri Lanka
+                  Nugegoda 10107,
+                  <br /> Sri Lanka
                 </span>
               </motion.li>
               <motion.li
@@ -273,7 +282,8 @@ const Footer = () => {
             className="flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm"
           >
             <p>
-              © {new Date().getFullYear()} 3G Consultants. All rights reserved.
+              © {new Date().getFullYear()} 3G Consultants (Pvt) Ltd. All rights
+              reserved.
             </p>
           </motion.div>
         </div>

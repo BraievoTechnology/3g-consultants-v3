@@ -4,30 +4,12 @@ import SectionTitle from "../Components/ui/SectionTitle";
 import { EyeIcon, TargetIcon } from "lucide-react";
 import { motion } from "framer-motion";
 import WordCarousel from "../Components/animations/WorldCarousel";
-
+import imageOne from "../../../public/construction-workers-sunset.jpg";
+import imageTwo from "../../../public/portrait-engineers-work-hours-job-site.jpg";
 import Header from "../Components/Layout/Header";
 import Footer from "../Components/Layout/Footer";
+import Image from "next/image";
 const teamMembers = [
-  {
-    name: "Saman Gamage",
-    role: "Director",
-    shortBio:
-      "Mr. Saman Gamage Co-founded 3G Consultants in year 2014 and successfully chaired as director.",
-    fullBio:
-      "Mr. Saman Gamage Co-founded 3G Consultants in year 2014 and successfully chaired as managing director. A Chartered Quantity Surveyor from the University of Moratuwa with over 23 years of experience and holds BSc. QS. (Hons) AIQSSL, M.Sc (Construction Law & Dispute Resolution),Dip. Arb.",
-    image:
-      "https://uploadthingy.s3.us-west-1.amazonaws.com/7MjpxjHuuGeQWYdNPLGo9d/saman.jpg",
-    expertise: [
-      "Strategic Leadership",
-      "Sustainable Construction",
-      "Project Management",
-    ],
-    education: "Ph.D. in Civil Engineering, Stanford University",
-    social: {
-      linkedin: "https://linkedin.com",
-      facebook: "https://facebook.com",
-    },
-  },
   {
     name: "Prasad Jasinghe",
     role: "Managing Director",
@@ -43,6 +25,26 @@ const teamMembers = [
       "Technical Innovation",
     ],
     education: "M.S. in Structural Engineering, MIT",
+    social: {
+      linkedin: "https://linkedin.com",
+      facebook: "https://facebook.com",
+    },
+  },
+  {
+    name: "Saman Gamage",
+    role: "Director",
+    shortBio:
+      "Mr. Saman Gamage Co-founded 3G Consultants in year 2014 and successfully chaired as director.",
+    fullBio:
+      "Mr. Saman Gamage Co-founded 3G Consultants in year 2014 and successfully chaired as managing director. A Chartered Quantity Surveyor from the University of Moratuwa with over 23 years of experience and holds BSc. QS. (Hons) AIQSSL, M.Sc (Construction Law & Dispute Resolution),Dip. Arb.",
+    image:
+      "https://uploadthingy.s3.us-west-1.amazonaws.com/7MjpxjHuuGeQWYdNPLGo9d/saman.jpg",
+    expertise: [
+      "Strategic Leadership",
+      "Sustainable Construction",
+      "Project Management",
+    ],
+    education: "Ph.D. in Civil Engineering, Stanford University",
     social: {
       linkedin: "https://linkedin.com",
       facebook: "https://facebook.com",
@@ -269,7 +271,7 @@ const AboutPage = () => {
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
-                <p className="mb-4 mt-4 text-black text-justify">
+                <p className="mb-4 mt-4 text-black text-justify leading-loose text-[16px]">
                   Being a market thought leader since 2014, 3G Consultants (Pvt)
                   Ltd, has been making innovative waves in the rapidly
                   developing construction industry in Sri Lanka. Specializing in
@@ -279,7 +281,7 @@ const AboutPage = () => {
                   and more, 3G Consultant (Pvt) Ltd, has roared in the industry
                   by providing exceptional service to its clientele.
                 </p>
-                <p className="mb-4 text-black text-justify">
+                <p className="mb-4 text-black text-justify leading-loose text-[16px]">
                   Providing an array of services such as Geometric Surveys,
                   Feasibility Studies, Action Plans, Sociological, and
                   Environmental Studies, Engineering Design, Economic and
@@ -293,7 +295,7 @@ const AboutPage = () => {
                   unwavering commitment to client’s success. That’s what sets us
                   apart. We are here for the long-haul.
                 </p>
-                <p className="mb-4 text-black text-justify">
+                <p className="mb-4 text-black text-justify leading-loose text-[16px]">
                   Our team can seamlessly work with multi-disciplined teams both
                   locally and internationally as they come from a vast array of
                   technical backgrounds and have worked with many different
@@ -306,7 +308,7 @@ const AboutPage = () => {
                   help of our state-of-the-art software solutions we use at 3G
                   Consultants (Pvt) Ltd.
                 </p>
-                <p className="text-black text-justify">
+                <p className="text-black text-justify leading-loose text-[16px]">
                   We take pride in focusing on reducing risk and improving the
                   value we provide for customers while delivering an
                   all-inclusive suite of construction consulting expertise in
@@ -318,12 +320,22 @@ const AboutPage = () => {
                 <img
                   src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
                   alt="Construction team"
-                  className="rounded-lg h-64 w-full object-cover"
+                  className="rounded-lg h-100 w-full object-cover "
                 />
                 <img
                   src="https://images.unsplash.com/photo-1485083269755-a7b559a4fe5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
                   alt="Historical project"
-                  className="rounded-lg h-64 w-full object-cover"
+                  className="rounded-lg h-100 w-full object-cover"
+                />
+                <Image
+                  src={imageOne}
+                  alt="Historical project"
+                  className="rounded-lg h-100 w-full object-cover"
+                />
+                <img
+                  src="/portrait-engineers-work-hours-job-site.jpg"
+                  alt="Historical project"
+                  className="rounded-lg h-100 w-full object-cover"
                 />
               </div>
             </div>
