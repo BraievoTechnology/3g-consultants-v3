@@ -22,7 +22,7 @@ model Project {
   location     String?
   start_date   DateTime?
   end_date     DateTime?
-  budget       Decimal?
+  budget       String?
   status       ProjectStatus
   description  String?
   category     Category
