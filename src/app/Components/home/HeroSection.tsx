@@ -71,37 +71,40 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 h-full flex mt-[170px] relative z-10">
         <div className="max-w-3xl mt-20">
           <FadeIn delay={0.2}>
-            <span>
-              <span className="text-3xl md:text-3xl lg:text-3xl font-bold mb-6 mr-[5px]">
-                We
-              </span>
-              <AnimatePresence mode="wait">
-                <motion.span
-                  key={words[currentWordIndex]}
-                  initial={{
-                    y: 30,
-                    opacity: 0,
-                  }}
-                  animate={{
-                    y: 0,
-                    opacity: 1,
-                  }}
-                  exit={{
-                    y: -30,
-                    opacity: 0,
-                  }}
-                  transition={{
-                    duration: 0.5,
-                    type: "spring",
-                    stiffness: 300,
-                    damping: 30,
-                  }}
-                  className="whitespace-nowrap font-bold text-3xl md:text-3xl lg:text-3xl text-[#ffbe00] mr-[5px]"
-                >
-                  {words[currentWordIndex]}
-                </motion.span>
-              </AnimatePresence>
-            </span>
+            <div className="text-left">
+              <div className="relative inline-block px-4 py-2">
+                {/* Top-left red bracket */}
+                <div className="absolute top-0 left-0 w-5 h-5 border-t-4 border-l-4 border-[#ffbe00]"></div>
+
+                {/* Bottom-right red bracket */}
+                <div className="absolute bottom-0 right-0 w-5 h-5 border-b-4 border-r-4 border-white"></div>
+
+                {/* Fixed-size container to hold text without shifting */}
+                <div className="flex items-center space-x-2">
+                  <span className="text-3xl font-bold text-white">We</span>
+
+                  <div className="relative w-[120px] h-[40px] overflow-hidden">
+                    <AnimatePresence mode="wait">
+                      <motion.span
+                        key={words[currentWordIndex]}
+                        initial={{ y: 30, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        exit={{ y: -30, opacity: 0 }}
+                        transition={{
+                          duration: 0.5,
+                          type: "spring",
+                          stiffness: 300,
+                          damping: 30,
+                        }}
+                        className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 font-bold text-3xl text-[#ffbe00]"
+                      >
+                        {words[currentWordIndex]}
+                      </motion.span>
+                    </AnimatePresence>
+                  </div>
+                </div>
+              </div>
+            </div>
           </FadeIn>
           <FadeIn delay={0.2}>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-[#ffbe00] leading-tight md:leading-snug lg:leading-normal">

@@ -41,23 +41,23 @@ const normalizeEmploymentType = (type: string): string => {
 };
 const benefits = [
   {
-    icon: <HeartIcon className="w-6 h-6" />,
+    icon: <HeartIcon className="w-6 h-6 text-black" />,
     title: "Health & Wellness",
     description:
       "Comprehensive medical, dental, and vision coverage for you and your family",
   },
   {
-    icon: <GraduationCapIcon className="w-6 h-6" />,
+    icon: <GraduationCapIcon className="w-6 h-6 text-black" />,
     title: "Learning & Development",
     description: "Professional development programs and certification support",
   },
   {
-    icon: <UsersIcon className="w-6 h-6" />,
+    icon: <UsersIcon className="w-6 h-6 text-black" />,
     title: "Work-Life Balance",
     description: "Flexible working hours and paid time off",
   },
   {
-    icon: <TrendingUpIcon className="w-6 h-6" />,
+    icon: <TrendingUpIcon className="w-6 h-6 text-black" />,
     title: "Career Growth",
     description: "Clear career progression paths and mentorship opportunities",
   },
@@ -280,7 +280,7 @@ const CareersPage = () => {
                   }}
                   className="bg-white p-6 rounded-lg shadow-md text-center"
                 >
-                  <div className="w-12 h-12 mx-auto mb-4 bg-black rounded-full flex items-center justify-center text-[#ffbe00]">
+                  <div className="w-12 h-12 mx-auto mb-4 bg-[#ffbe00] rounded-full flex items-center justify-center text-[#ffbe00]">
                     {benefit.icon}
                   </div>
                   <h3 className="text-lg font-bold text-black mb-2">

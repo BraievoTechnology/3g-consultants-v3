@@ -163,7 +163,7 @@ const ServiceCard = ({ service }: { service: (typeof services)[0] }) => {
             </div>
           </div>
           <motion.div
-            className="flex items-center text-[#ffbe00] font-medium text-xl"
+            className="flex items-center text-[#ffbe00] font-medium text-xl "
             initial={{
               x: 0,
             }}
@@ -229,7 +229,7 @@ const MobileServiceCard = ({
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/50 to-black/90" />
-        <div className="relative h-full p-6 flex flex-col justify-end z-10">
+        <div className="relative h-full p-6 pb-28 md:pb-6 flex flex-col justify-end z-10">
           <ServiceIcon>{service.icon}</ServiceIcon>
           <h3 className="text-2xl font-bold text-white mb-4">
             {service.title}
@@ -341,12 +341,14 @@ const ServicesSection = () => {
                 />
               ))}
             </div>
-            <button
-              onClick={nextSlide}
-              className="p-2 rounded-full bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 transition-colors"
-            >
-              <ChevronRightIcon size={24} />
-            </button>
+            <div className="flex gap-4">
+              <button
+                onClick={prevSlide}
+                className="p-2 rounded-full bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 transition-colors"
+              >
+                <ChevronRightIcon size={24} />
+              </button>
+            </div>
           </div>
         </div>
       ) : (

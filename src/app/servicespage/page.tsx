@@ -148,7 +148,7 @@ const ServicesPage = () => {
                 <div
                   key={service.id}
                   id={service.id}
-                  className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center scroll-mt-[100px] ${
+                  className={` grid grid-cols-1 lg:grid-cols-2 gap-12 h-[60vh] items-center scroll-mt-[100px] ${
                     index % 2 === 1 ? "lg:flex-row-reverse" : ""
                   }`}
                 >
@@ -159,13 +159,15 @@ const ServicesPage = () => {
                         {service.title}
                       </h2>
                     </div>
-                    <p className="text-black">{service.description}</p>
+                    <p className="text-black leading-loose text-justify text-[18px]">
+                      {service.description}
+                    </p>
                   </div>
                   <div className={`${index % 2 === 1 ? "lg:order-1" : ""}`}>
                     <img
                       src={service.image}
                       alt={service.title}
-                      className="rounded-lg shadow-lg w-full h-80 object-cover transition-transform duration-300 hover:scale-105"
+                      className="rounded-lg shadow-lg w-full h-100 object-cover transition-transform duration-300 hover:scale-105"
                     />
                   </div>
                 </div>
