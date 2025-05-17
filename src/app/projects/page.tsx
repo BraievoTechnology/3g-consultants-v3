@@ -94,12 +94,12 @@ const ProjectCard = ({ project }: { project: Project }) => {
               </h4>
               <p className="text-black/80 text-sm">{project.location}</p>
             </div>
-            <div>
+           {/* <div>
               <h4 className="text-sm font-semibold text-black mb-1">
                 Budget (LKR)
               </h4>
               <p className="text-black/80 text-sm">{project.budget || "N/A"}</p>
-            </div>
+            </div>*/}
           </div>
         </div>
       </div>
