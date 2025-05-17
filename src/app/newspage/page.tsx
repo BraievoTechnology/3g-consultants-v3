@@ -21,14 +21,14 @@ const NewsPage = () => {
   const { news, loading, error } = useNews();
   if (loading) {
     return (
-      <div className="w-full min-h-screen flex items-center justify-center">
-        <div className="text-xl text-gray-600">Loading news...</div>
+      <div className="w-full min-h-screen flex items-center justify-center bg-[#f5f5f5]">
+        <div className="text-xl text-[#f1c235]">Loading news...</div>
       </div>
     );
   }
   if (error) {
     return (
-      <div className="w-full min-h-screen flex items-center justify-center">
+      <div className="w-full min-h-screen flex items-center justify-center bg-[#f5f5f5]">
         <div className="text-xl text-red-600">
           Error loading news: {error.message}
         </div>

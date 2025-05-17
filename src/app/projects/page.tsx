@@ -127,15 +127,15 @@ const ProjectsPage = () => {
   }, [projects, activeCategory]);
   if (loading) {
     return (
-      <div className="w-full min-h-screen flex items-center justify-center bg-black">
+      <div className="w-full min-h-screen flex items-center justify-center bg-[#f5f5f5]">
         <div className="text-xl text-[#f1c235]">Loading projects...</div>
       </div>
     );
   }
   if (error) {
     return (
-      <div className="w-full min-h-screen flex items-center justify-center bg-black">
-        <div className="text-xl text-red-500">
+      <div className="w-full min-h-screen flex items-center justify-center bg-[#f5f5f5]">
+        <div className="text-xl text-red">
           Error loading projects: {error.message}
         </div>
       </div>
