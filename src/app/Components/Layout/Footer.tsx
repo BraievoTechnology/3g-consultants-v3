@@ -111,7 +111,7 @@ const Footer = () => {
                   variants={socialIconVariants}
                   initial="initial"
                   whileHover="hover"
-                  className="p-2 bg-yellow-500/50 rounded-lg hover:bg-yellow-500 text-black hover:text-white transition-colors"
+                  className="p-2 bg-[#ffbe00] rounded-lg text-black hover:text-white transition-colors"
                 >
                   <social.Icon size={20} />
                 </motion.a>
@@ -216,7 +216,8 @@ const Footer = () => {
               >
                 <MapPinIcon
                   size={20}
-                  className="mr-3 mt-1 flex-shrink-0 text-yellow-500"
+                  className="mr-3 mt-1 flex-shrink-0 text-[#ffbe00]
+"
                 />
                 <span>
                   19/B Jeswell Pl
@@ -232,7 +233,8 @@ const Footer = () => {
               >
                 <PhoneIcon
                   size={20}
-                  className="mr-3 flex-shrink-0 text-yellow-500"
+                  className="mr-3 flex-shrink-0 text-[#ffbe00]
+"
                 />
                 <span>011 283 5074</span>
               </motion.li>
@@ -244,7 +246,8 @@ const Footer = () => {
               >
                 <MailIcon
                   size={20}
-                  className="mr-3 flex-shrink-0 text-yellow-500"
+                  className="mr-3 flex-shrink-0 text-[#ffbe00]
+"
                 />
                 <span>info@3gconsultants.lk</span>
               </motion.li>

@@ -25,9 +25,9 @@ const ButtonV2 = ({
   // Variant-specific styles
   const variantClasses = {
     primary:
-      "bg-gradient-to-r from-[#ffbe00] to-[#ffbe00] text-black shadow-lg hover:shadow-[#ffbe00]/25",
-    secondary: "bg-white text-black shadow-lg hover:shadow-black/25",
-    outline: "text-white bg-black shadow-lg hover:shadow-black/25",
+      "bg-gradient-to-r from-[#ffbe00] to-[#ffbe00] text-black shadow-lg hover:shadow-[#ffbe00]/25 ",
+    secondary: "bg-white text-black shadow-lg hover:shadow-black/25 ",
+    outline: "text-white bg-black shadow-lg hover:shadow-black/25 h-[50px]",
   };
   const allClasses = `${baseClasses} ${variantClasses[variant]} ${className}`;
   const buttonContent = (
