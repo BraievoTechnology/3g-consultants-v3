@@ -47,8 +47,8 @@ const ProjectCard = ({ project }: { project: Project }) => {
                     ? "bg-blue-500/90 text-white"
                     : project.status.toLowerCase() === "inprogress" ||
                       project.status === "Ongoing"
-                    ? "bg-[#ffbe00]/90 text-black"
-                    : "bg-green-500/90 text-white"
+                    ? "bg-[#ffbe00]/90 text-black capitalize"
+                    : "bg-green-500/90 text-white capitalize"
                 }`}
               >
                 {normalizeStatus(project.status)}
@@ -177,7 +177,7 @@ const ProjectsPage = () => {
                   onClick={() => setActiveCategory(category)}
                   className={`px-6 py-2 rounded-full transition-colors duration-200 ${
                     activeCategory === category
-                      ? "bg-[#ffbe00] text-white"
+                      ? "bg-[#ffbe00] text-black"
                       : "bg-gray-200 text-gray-700 hover:bg-gray-300"
                   }`}
                 >

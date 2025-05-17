@@ -9,6 +9,7 @@ import {
   LeafIcon,
   BriefcaseIcon,
   MapIcon,
+  TrafficCone,
 } from "lucide-react";
 import { motion } from "framer-motion";
 import Header from "../Components/Layout/Header";
@@ -29,7 +30,7 @@ const services = [
     title: "Highways and Transportation Engineering",
     description:
       "Sri Lanka, been a developing country that has initiated many infrastructure developments projects, mainly in urban and rural road development projects together with other supportive infrastructure development projects such as earthwork & paving, electrification, landscaping, widening, up-gradation and drainage and beyond. This has created many opportunities for our firm to demonstrate our talent in recent Highways and Transportation projects.",
-    icon: <div size={48} className="text-[#ffbe00]" />,
+    icon: <TrafficCone size={48} className="text-[#ffbe00]" />,
     link: "/services/highways",
     image:
       "https://uploadthingy.s3.us-west-1.amazonaws.com/4uSRqgPmWzgHjbBK4u28DW/2.jpg",

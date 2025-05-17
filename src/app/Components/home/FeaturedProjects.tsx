@@ -168,7 +168,7 @@ const ProjectCard = ({ project }: { project: (typeof projects)[0] }) => {
               duration: 0.5,
             }}
           >
-            <motion.span className="inline-block text-sm font-medium bg-[#ffbe00] px-3 py-1 rounded-full text-white">
+            <motion.span className="inline-block text-sm font-medium bg-[#ffbe00] px-3 py-1 rounded-full text-black">
               {content.category}
             </motion.span>
             <motion.h3 className="text-3xl md:text-4xl font-bold text-white">
