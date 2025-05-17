@@ -1,25 +1,25 @@
-import React, { useEffect, useState } from 'react'
-import { AnimatePresence, motion } from 'framer-motion'
+import React, { useEffect, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 interface WordCarouselProps {
-  words: string[]
-  interval?: number
-  className?: string
+  words: string[];
+  interval?: number;
+  className?: string;
 }
 const WordCarousel: React.FC<WordCarouselProps> = ({
   words,
   interval = 2000,
-  className = '',
+  className = "",
 }) => {
-  const [index, setIndex] = useState(0)
+  const [index, setIndex] = useState(0);
   useEffect(() => {
     const changeWord = setInterval(() => {
-      setIndex((prevIndex) => (prevIndex + 1) % words.length)
-    }, interval)
-    return () => clearInterval(changeWord)
-  }, [words.length, interval])
+      setIndex((prevIndex) => (prevIndex + 1) % words.length);
+    }, interval);
+    return () => clearInterval(changeWord);
+  }, [words.length, interval]);
   return (
     <div
-      className={`inline-flex relative min-w-[80px] h-13 items-center justify-center bg-yellow-500 text-white font-medium rounded px-2 ${className}`}
+      className={`inline-flex relative min-w-[80px] h-17 items-center justify-center bg-[#ffbe00] text-white font-medium rounded px-2 ${className}`}
     >
       <AnimatePresence mode="wait">
         <motion.span
@@ -38,7 +38,7 @@ const WordCarousel: React.FC<WordCarouselProps> = ({
           }}
           transition={{
             duration: 0.5,
-            type: 'spring',
+            type: "spring",
             stiffness: 300,
             damping: 30,
           }}
@@ -48,6 +48,6 @@ const WordCarousel: React.FC<WordCarouselProps> = ({
         </motion.span>
       </AnimatePresence>
     </div>
-  )
-}
-export default WordCarousel
+  );
+};
+export default WordCarousel;

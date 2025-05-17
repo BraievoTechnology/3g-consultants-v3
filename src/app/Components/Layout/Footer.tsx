@@ -143,7 +143,7 @@ const Footer = () => {
                 >
                   <Link
                     href={`/${item.toLowerCase().replace(" ", "-")}`}
-                    className="flex items-center text-gray-500 hover:text-[#f1c235] transition-colors"
+                    className="flex items-center text-gray-500 hover:text-[#ffbe00] transition-colors"
                   >
                     <ChevronRightIcon size={16} className="mr-2" />
                     {item}
@@ -183,7 +183,7 @@ const Footer = () => {
                 >
                   <Link
                     href={`/servicespage/`}
-                    className="flex items-center text-gray-500 hover:text-[#f1c235] transition-colors"
+                    className="flex items-center text-gray-500 hover:text-[#ffbe00] transition-colors"
                   >
                     <ChevronRightIcon size={16} className="mr-2" />
                     {service}
@@ -252,7 +252,7 @@ const Footer = () => {
           </motion.div>
         </div>
       </div>
-      <div className="relative border-t border-[#f1c235]">
+      <div className="relative border-t border-[#ffbe00]">
         <div className="container mx-auto px-4 py-6">
           <motion.div
             initial={{

@@ -39,7 +39,7 @@ const HeroSection = () => {
         {[...Array(3)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-72 h-72 bg-[#f1c235] rounded-full"
+            className="absolute w-72 h-72 bg-[#ffbe00] rounded-full"
             style={{
               left: `${20 + i * 30}%`,
               top: `${20 + i * 20}%`,
@@ -61,7 +61,7 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 h-full flex mt-[170px] relative z-10">
         <div className="max-w-3xl mt-20">
           <FadeIn delay={0.2}>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-[#f1c235]">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-[#ffbe00]">
               Engineering Excellence for Tomorrow's World
             </h1>
           </FadeIn>

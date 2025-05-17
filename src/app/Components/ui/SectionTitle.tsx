@@ -17,7 +17,7 @@ const SectionTitle = ({
     <div className={`mb-12 ${centered ? "text-center" : ""} ${className}`}>
       <FadeIn>
         <motion.h2
-          className="text-3xl md:text-4xl font-bold text-black mb-4"
+          className="text-3xl md:text-4xl font-bold text-[#ffbe00] mb-4"
           initial={{
             backgroundPosition: "0% 0%",
           }}
@@ -27,12 +27,6 @@ const SectionTitle = ({
           transition={{
             duration: 2,
             ease: "linear",
-          }}
-          style={{
-            backgroundImage: "linear-gradient(#f1c235)",
-            backgroundSize: "200%",
-            WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent",
           }}
         >
           {title}

@@ -258,11 +258,11 @@ const AboutPage = () => {
         <section className="py-16 bg-[#f5f5f5]">
           <div className="container mx-auto px-4">
             <div className="flex items-center gap-2">
-              <span className="text-[50px] font-bold text-[#f1c235]">We</span>
-              <span className="text-[50px] font-bold text-[#f1c235]">
+              <span className="text-[50px] font-bold text-[#ffbe00]">We</span>
+              <span className="text-[50px] font-bold text-[#ffbe00]">
                 <WordCarousel words={["Create", "Develop", "Build"]} />
               </span>
-              <span className="text-[50px] font-bold text-[#f1c235]">
+              <span className="text-[50px] font-bold text-[#ffbe00]">
                 Solutions
               </span>
             </div>
@@ -330,7 +330,7 @@ const AboutPage = () => {
           </div>
         </section>
 
-        <section className="py-16 bg-[#f1c235]">
+        <section className="py-16 bg-[#ffbe00]">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
               <div className="bg-white p-8 rounded-lg shadow-md">

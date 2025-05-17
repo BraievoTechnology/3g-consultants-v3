@@ -71,7 +71,7 @@ const services = [
 const ServiceIcon = ({ children }: { children: React.ReactNode }) => {
   return (
     <motion.div
-      className="mb-4 p-3 bg-white/10 backdrop-blur-sm rounded-lg w-fit"
+      className="mb-4 p-3 bg-[#ffbe00] rounded-lg w-fit"
       whileHover={{
         scale: 1.1,
         rotate: [0, -10, 10, -10, 10, 0],
@@ -163,7 +163,7 @@ const ServiceCard = ({ service }: { service: (typeof services)[0] }) => {
             </div>
           </div>
           <motion.div
-            className="flex items-center text-yellow-400 font-medium text-xl"
+            className="flex items-center text-[#ffbe00] font-medium text-xl"
             initial={{
               x: 0,
             }}

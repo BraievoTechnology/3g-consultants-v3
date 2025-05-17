@@ -75,7 +75,7 @@ const AboutPreview = () => {
           >
             <div>
               <motion.h2
-                className="text-4xl md:text-5xl font-bold text-[#f1c235] mb-6"
+                className="text-4xl md:text-5xl font-bold text-[#ffbe00] mb-6"
                 initial={{
                   opacity: 0,
                   y: 20,
@@ -152,7 +152,7 @@ const AboutPreview = () => {
                       duration: 0.5,
                       delay: index * 0.1,
                     }}
-                    className="w-12 h-12 mx-auto mb-3 bg-black rounded-full flex items-center justify-center text-[#f1c235]"
+                    className="w-12 h-12 mx-auto mb-3 bg-black rounded-full flex items-center justify-center text-[#ffbe00]"
                   >
                     <motion.div
                       animate={stat.animation}
