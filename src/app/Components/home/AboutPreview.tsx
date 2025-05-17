@@ -17,7 +17,7 @@ const AboutPreview = () => {
   ];
   const stats = [
     {
-      icon: <BuildingIcon className="w-6 h-6" />,
+      icon: <BuildingIcon className="w-6 h-6 text-black" />,
       value: "125+",
       label: "Projects Completed",
       animation: {
@@ -26,7 +26,7 @@ const AboutPreview = () => {
       },
     },
     {
-      icon: <ScaleIcon className="w-6 h-6" />,
+      icon: <ScaleIcon className="w-6 h-6 text-black" />,
       value: "50+",
       label: "Claims Managed",
       animation: {
@@ -35,7 +35,7 @@ const AboutPreview = () => {
       },
     },
     {
-      icon: <GlobeIcon className="w-6 h-6" />,
+      icon: <GlobeIcon className="w-6 h-6 text-black" />,
       value: "7+",
       label: "Countries Served",
       animation: {
@@ -43,7 +43,7 @@ const AboutPreview = () => {
       },
     },
     {
-      icon: <BriefcaseIcon className="w-6 h-6" />,
+      icon: <BriefcaseIcon className="w-6 h-6 text-black" />,
       value: "10+",
       label: "Years Experience",
       animation: {
@@ -75,7 +75,7 @@ const AboutPreview = () => {
           >
             <div>
               <motion.h2
-                className="text-4xl md:text-5xl font-bold text-[#f1c235] mb-6"
+                className="text-4xl md:text-5xl font-bold text-[#ffbe00] mb-6 leading-tight md:leading-snug lg:leading-normal"
                 initial={{
                   opacity: 0,
                   y: 20,
@@ -152,7 +152,7 @@ const AboutPreview = () => {
                       duration: 0.5,
                       delay: index * 0.1,
                     }}
-                    className="w-12 h-12 mx-auto mb-3 bg-black rounded-full flex items-center justify-center text-[#f1c235]"
+                    className="w-12 h-12 mx-auto mb-3 bg-[#ffbe00] rounded-full flex items-center justify-center text-[#ffbe00]"
                   >
                     <motion.div
                       animate={stat.animation}

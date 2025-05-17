@@ -193,7 +193,7 @@ const Header = () => {
               </div>
               <Link
                 href="/"
-                className="text-2xl font-bold text-[#f1c235] relative z-10 hidden md:block"
+                className="text-2xl font-bold text-[#ffbe00] relative z-10 hidden md:block"
               >
                 <BrandText />
               </Link>
@@ -205,7 +205,7 @@ const Header = () => {
                   onClick={() =>
                     handleNavClick(item.sectionId || "", item.path || "")
                   }
-                  className="text-[#f1c235] hover:text-black font-medium cursor-pointer"
+                  className="text-[#ffbe00] hover:text-black font-medium cursor-pointer"
                   whileHover={{
                     scale: 1.1,
                     transition: {

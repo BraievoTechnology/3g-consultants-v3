@@ -168,7 +168,7 @@ const ProjectCard = ({ project }: { project: (typeof projects)[0] }) => {
               duration: 0.5,
             }}
           >
-            <motion.span className="inline-block text-sm font-medium bg-white px-3 py-1 rounded-full text-[#f1c235]">
+            <motion.span className="inline-block text-sm font-medium bg-[#ffbe00] px-3 py-1 rounded-full text-black">
               {content.category}
             </motion.span>
             <motion.h3 className="text-3xl md:text-4xl font-bold text-white">
@@ -200,10 +200,10 @@ const ProjectCard = ({ project }: { project: (typeof projects)[0] }) => {
             <motion.p className="text-white text-lg leading-relaxed">
               {content.description}
             </motion.p>
-           {/* <motion.div className="flex items-center text-yellow-400 font-semibold group/link">
+            <motion.div className="flex items-center text-[#ffbe00] font-semibold group/link">
               <Link
                 href={project.link}
-                className="flex items-center hover:text-yellow-300"
+                className="flex items-center hover:text-[#ffbe00]"
               >
                 Read More
                 <ArrowRightIcon
@@ -211,7 +211,7 @@ const ProjectCard = ({ project }: { project: (typeof projects)[0] }) => {
                   className="ml-2 transform transition-transform duration-300 group-hover/link:translate-x-1"
                 />
               </Link>
-            </motion.div>*/}
+            </motion.div>
           </motion.div>
         </AnimatePresence>
       </motion.div>

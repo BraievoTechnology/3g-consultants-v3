@@ -258,18 +258,18 @@ const AboutPage = () => {
         <section className="py-16 bg-[#f5f5f5]">
           <div className="container mx-auto px-4">
             <div className="flex items-center gap-2">
-              <span className="text-[50px] font-bold text-[#f1c235]">We</span>
-              <span className="text-[50px] font-bold text-[#f1c235]">
+              <span className="text-[50px] font-bold text-[#ffbe00]">We</span>
+              <span className="text-[50px] font-bold text-[#ffbe00]">
                 <WordCarousel words={["Create", "Develop", "Build"]} />
               </span>
-              <span className="text-[50px] font-bold text-[#f1c235]">
+              <span className="text-[50px] font-bold text-[#ffbe00]">
                 Solutions
               </span>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
-                <p className="mb-4 mt-4 text-black">
+                <p className="mb-4 mt-4 text-black text-justify">
                   Being a market thought leader since 2014, 3G Consultants (Pvt)
                   Ltd, has been making innovative waves in the rapidly
                   developing construction industry in Sri Lanka. Specializing in
@@ -279,7 +279,7 @@ const AboutPage = () => {
                   and more, 3G Consultant (Pvt) Ltd, has roared in the industry
                   by providing exceptional service to its clientele.
                 </p>
-                <p className="mb-4 text-black">
+                <p className="mb-4 text-black text-justify">
                   Providing an array of services such as Geometric Surveys,
                   Feasibility Studies, Action Plans, Sociological, and
                   Environmental Studies, Engineering Design, Economic and
@@ -293,7 +293,7 @@ const AboutPage = () => {
                   unwavering commitment to client’s success. That’s what sets us
                   apart. We are here for the long-haul.
                 </p>
-                <p className="mb-4 text-black">
+                <p className="mb-4 text-black text-justify">
                   Our team can seamlessly work with multi-disciplined teams both
                   locally and internationally as they come from a vast array of
                   technical backgrounds and have worked with many different
@@ -306,7 +306,7 @@ const AboutPage = () => {
                   help of our state-of-the-art software solutions we use at 3G
                   Consultants (Pvt) Ltd.
                 </p>
-                <p className="text-black">
+                <p className="text-black text-justify">
                   We take pride in focusing on reducing risk and improving the
                   value we provide for customers while delivering an
                   all-inclusive suite of construction consulting expertise in
@@ -330,7 +330,7 @@ const AboutPage = () => {
           </div>
         </section>
 
-        <section className="py-16 bg-[#f1c235]">
+        <section className="py-16 bg-[#ffbe00]">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
               <div className="bg-white p-8 rounded-lg shadow-md">

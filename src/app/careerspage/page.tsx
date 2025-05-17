@@ -84,7 +84,7 @@ const CareersPage = () => {
   if (loading) {
     return (
       <div className="w-full min-h-screen flex items-center justify-center bg-[#f5f5f5]">
-        <div className="text-xl text-[#f1c235]">
+        <div className="text-xl text-[#ffbe00]">
           Loading job opportunities...
         </div>
       </div>
@@ -152,12 +152,12 @@ const CareersPage = () => {
                   placeholder="Search positions..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full px-4 py-3 pl-12 rounded-lg border border-[#f1c235]"
+                  className="w-full px-4 py-3 pl-12 rounded-lg border border-[#ffbe00]"
                 />
                 <SearchIcon className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" />
               </div>
               <div className="mb-8">
-                <h3 className="text-lg font-semibold text-[#f1c235] mb-2">
+                <h3 className="text-lg font-semibold text-[#ffbe00] mb-2">
                   Employment Type
                 </h3>
                 <div className="flex flex-wrap gap-2">
@@ -196,7 +196,7 @@ const CareersPage = () => {
                 >
                   <div className="flex flex-col md:flex-row md:items-start md:justify-between">
                     <div className="flex-grow mb-4 md:mb-0 md:mr-8">
-                      <h3 className="text-xl font-bold text-[#f1c235] mb-2">
+                      <h3 className="text-xl font-bold text-[#ffbe00] mb-2">
                         {job.job_title}
                       </h3>
                       <div className="flex flex-wrap gap-4 text-sm text-gray-600 mb-4">
@@ -280,7 +280,7 @@ const CareersPage = () => {
                   }}
                   className="bg-white p-6 rounded-lg shadow-md text-center"
                 >
-                  <div className="w-12 h-12 mx-auto mb-4 bg-black rounded-full flex items-center justify-center text-[#f1c235]">
+                  <div className="w-12 h-12 mx-auto mb-4 bg-black rounded-full flex items-center justify-center text-[#ffbe00]">
                     {benefit.icon}
                   </div>
                   <h3 className="text-lg font-bold text-black mb-2">
@@ -328,7 +328,7 @@ const CareersPage = () => {
                     }}
                     className="flex items-start"
                   >
-                    <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#f1c235] text-black flex items-center justify-center font-bold mr-4">
+                    <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#ffbe00] text-black flex items-center justify-center font-bold mr-4">
                       {index + 1}
                     </div>
                     <div className="flex-grow">
@@ -342,7 +342,7 @@ const CareersPage = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 bg-[#f1c235] text-black">
+        <section className="py-16 bg-[#ffbe00] text-black">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl font-bold mb-6">
               Ready to Start Your Journey?

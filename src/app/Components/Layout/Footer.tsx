@@ -111,7 +111,7 @@ const Footer = () => {
                   variants={socialIconVariants}
                   initial="initial"
                   whileHover="hover"
-                  className="p-2 bg-yellow-500/50 rounded-lg hover:bg-yellow-500 text-black hover:text-white transition-colors"
+                  className="p-2 bg-[#ffbe00] rounded-lg text-black hover:text-white transition-colors"
                 >
                   <social.Icon size={20} />
                 </motion.a>
@@ -143,7 +143,7 @@ const Footer = () => {
                 >
                   <Link
                     href={`/${item.toLowerCase().replace(" ", "-")}`}
-                    className="flex items-center text-gray-500 hover:text-[#f1c235] transition-colors"
+                    className="flex items-center text-gray-500 hover:text-[#ffbe00] transition-colors"
                   >
                     <ChevronRightIcon size={16} className="mr-2" />
                     {item}
@@ -183,7 +183,7 @@ const Footer = () => {
                 >
                   <Link
                     href={`/servicespage/`}
-                    className="flex items-center text-gray-500 hover:text-[#f1c235] transition-colors"
+                    className="flex items-center text-gray-500 hover:text-[#ffbe00] transition-colors"
                   >
                     <ChevronRightIcon size={16} className="mr-2" />
                     {service}
@@ -216,7 +216,8 @@ const Footer = () => {
               >
                 <MapPinIcon
                   size={20}
-                  className="mr-3 mt-1 flex-shrink-0 text-yellow-500"
+                  className="mr-3 mt-1 flex-shrink-0 text-[#ffbe00]
+"
                 />
                 <span>
                   19/B Jeswell Pl
@@ -232,7 +233,8 @@ const Footer = () => {
               >
                 <PhoneIcon
                   size={20}
-                  className="mr-3 flex-shrink-0 text-yellow-500"
+                  className="mr-3 flex-shrink-0 text-[#ffbe00]
+"
                 />
                 <span>011 283 5074</span>
               </motion.li>
@@ -244,7 +246,8 @@ const Footer = () => {
               >
                 <MailIcon
                   size={20}
-                  className="mr-3 flex-shrink-0 text-yellow-500"
+                  className="mr-3 flex-shrink-0 text-[#ffbe00]
+"
                 />
                 <span>info@3gconsultants.lk</span>
               </motion.li>
@@ -252,7 +255,7 @@ const Footer = () => {
           </motion.div>
         </div>
       </div>
-      <div className="relative border-t border-[#f1c235]">
+      <div className="relative border-t border-[#ffbe00]">
         <div className="container mx-auto px-4 py-6">
           <motion.div
             initial={{
